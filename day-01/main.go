@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var playername string
-	playername = "baby"
-	fmt.Println(playername)
+	accountAge := 2.6
+	accountAgeInt := 0
+	fmt.Println("your account has existed for", accountAgeInt, "years")
 }

@@ -6,11 +6,11 @@ func main() {
 	name := "wondwosen"
 	score := 40
 	credits := 125
-	status := canGraduate(credits)
 	grade := getGrade(score)
-	
+	status := canGraduate(credits, grade)
+
 	fmt.Println("Hello", name, "your grade is", grade)
-    fmt.Println("can graduate : " status )
+	fmt.Println("can graduate : ", status)
 }
 
 func getGrade(score int) string {
@@ -31,8 +31,10 @@ func getGrade(score int) string {
 	}
 }
 
-func canGraduate(credits int) bool {
-	return credits >= 120
+func canGraduate(credits int, grade string) bool {
+	if credits > 120 && grade != "F" {
+		return true
+	} else {
+		return false
+	}
 }
-
-   
