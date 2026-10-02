@@ -12,10 +12,10 @@ func (c Cash) Pay() {
 	fmt.Println("paid with cash")
 }
 
-type Card struct{}
+type Telebirr struct{}
 
-func (c Card) Pay() {
-	fmt.Println("paid with card")
+func (c Telebirr) Pay() {
+	fmt.Println("paid with Telebirr")
 }
 
 func ProcessPayment(p Payment) {
@@ -23,6 +23,6 @@ func ProcessPayment(p Payment) {
 }
 
 func main() {
+	ProcessPayment(Telebirr{})
 	ProcessPayment(Cash{})
-	ProcessPayment(Card{})
 }
