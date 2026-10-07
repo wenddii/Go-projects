@@ -18,6 +18,12 @@ func (c Telebirr) Pay() {
 	fmt.Println("paid with Telebirr")
 }
 
+type BankTransfer struct{}
+
+func (B BankTransfer) Pay() {
+	fmt.Println("paid through bank transfer")
+}
+
 func ProcessPayment(p Payment) {
 	p.Pay()
 }
@@ -25,4 +31,5 @@ func ProcessPayment(p Payment) {
 func main() {
 	ProcessPayment(Telebirr{})
 	ProcessPayment(Cash{})
+	ProcessPayment(BankTransfer{})
 }
