@@ -6,3 +6,8 @@ func isValid(s string) bool {
 
 	}
 }
+
+func main() {
+	s:= "{[()]}"
+}
+

@@ -10,7 +10,7 @@ func main() {
 	status := canGraduate(credits, grade)
 
 	fmt.Println("Hello", name, "your grade is", grade)
-	fmt.Println("can graduate : ", status)
+	fmt.Println("can graduate ?  ", status)
 }
 
 func getGrade(score int) string {
